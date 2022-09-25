@@ -27,8 +27,27 @@ go version go1.19 darwin/arm64
   export PATH=$PATH:$GOBIN
   ```
 
+### ch02
+
+- 宣言されたが値が割り振られていない変数に対してはゼロ値が割り当てられる
+- リテラル
+
+  1. 整数リテラル
+
+  - デフォルトは 10 進数
+  - 0b をつけると二進数(**b**inaly)、0o をつけると 8 進数(**o**ctal)、0x をつけると 16 進数(he**x**adecimal)
+
+  1. 不動小数点リテラル
+  1. rune リテラル
+
+  - 先頭と最後に`'`を置いたもの
+
+  1. 文字列リテラル
+
 - コードのフォーマットには`go fmt`か`goimports`を使う
   - [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports)
+- GO では変数名はキャメルケースを使う
+- 名前の先頭文字が大文字か小文字がどうかでパッケージの外からアクセスできるかどうか決定される
 
 ## 参考
 
