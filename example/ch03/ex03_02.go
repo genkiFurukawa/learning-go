@@ -9,8 +9,9 @@ func main() {
 	y := x[:2]
 	z := x[1:]
 	x[1] = 20
-	y[0] = 10             // xの値も書き変わる
-	z[1] = 30             //  xの値も書き変わる
+	y[0] = 10 // xの値も書き変わる
+	z[1] = 30 //  xの値も書き変わる
+	fmt.Println("==")
 	fmt.Println("x: ", x) // x:  [10 20 30 4]
 	fmt.Println("y: ", y) // y:  [10 20]
 	fmt.Println("z: ", z) // z:  [20 30 4]
@@ -30,6 +31,7 @@ func main() {
 	e = append(e, 30, 40, 50) // [1, 2, 30 ,40, 50]
 	d = append(d, 60)         // [1, 2, 30, 40, 60]
 	f = append(f, 70)         // [30, 40, 70]
+	fmt.Println("==")
 	fmt.Println("d", d)
 	fmt.Println("e", e)
 	fmt.Println("f", f)
@@ -43,7 +45,20 @@ func main() {
 	h = append(h, 30, 40, 50) // [1, 2, 30 ,40, 50]
 	g = append(g, 60)         // [1, 2, 3, 4, 60]
 	i = append(i, 70)         // [3, 4, 70]
+	fmt.Println("==")
 	fmt.Println("g", g)
 	fmt.Println("h", h)
 	fmt.Println("i", i)
+
+	// 配列からスライスの変換
+	j := [...]int{5, 6, 7, 8} //配列を生成
+	k := j[:2]
+	l := j[2:]
+	m := k[:] // 配列 -> スライスの変換
+	j[0] = 10
+	fmt.Println("==")
+	fmt.Println("j", j)
+	fmt.Println("k", k)
+	fmt.Println("l", l)
+	fmt.Println("m", m)
 }
