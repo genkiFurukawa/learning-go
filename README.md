@@ -62,6 +62,14 @@ go version go1.19 darwin/arm64
   fmt.Println(data01 == nil) //trueになる
   ```
 
+### ch04
+
+- for-range ループではインデックスと値が取得できる。インデックスを使わないときは`_`を使う
+- マップのイテレーションはマップの定義順となるので、注意
+- for-range は値コピー
+- goto 文がある。標準ライブラリのパッケージ strconv などで使われている
+  - 稀に goto 文を使った方がわかりやすいときがあるので、そのときは goto を使う
+
 ## 参考
 
 - [『Learning Go』を読んで、Go に入門している](https://blog.magnolia.tech/entry/2022/06/25/161525)
